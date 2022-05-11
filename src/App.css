@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: blueviolet;
+}
+
+.App {
+    border: salmon 1px solid;
+    margin: 120px;
+    border: violet 1px solid;
+    border-radius: 40px;
+     color: blueviolet;
+     font-family: 'Poppins', sans-serif;
+}
+.Header {
+    text-align: center;
+}
+.Header h1  {
+    margin: 0;
+    padding: 40px;
+    font-size: 50px;
+    border-bottom: violet 1px solid;
+}
+.TaskPage {
+    display: flex;
+    padding-top: 30px;
+    color: blueviolet;
+}
+.TaskPage li {
+    margin:  10px;
+    color: black;
+    font-size: 18px;
+}
+.TaskPage ul {
+    padding-left: 15px;
+    margin-right: 100px;  
+    }
+
+    .AppCore{
+     
+        min-height: 30vh;
+    }

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import '../App.css';
 
 function TaskPage() { 
 
@@ -12,10 +13,9 @@ function TaskPage() {
 }, []);
 return (
     <div className="TaskPage">
-        this is taskpage
          <ul>
          {tasks.map((task) => (
-        <li key={task.id}>{task.text}</li>
+        <li key={task.id}>{task.text} {task.completed ? "Done": "To Do"}</li>
       ))}
     </ul>
     </div>);
