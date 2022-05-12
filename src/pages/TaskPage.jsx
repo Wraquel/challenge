@@ -1,25 +1,29 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import TaskService from '../services/TaskService';
+import ListItem from '../components/ListItem';
 import { TaskPageElement } from '../styles'
 
 function TaskPage() { 
-
   const [tasks, setTasks] = useState([]);
+
+  async function fetchTasks(){
+  await  TaskService().then(tasks => setTasks(tasks))
+  }
+  
   useEffect(() => { 
-    axios.get('http://localhost:3008/api/tasks/')
-    .then(response => {
-      setTasks(response.data)
-    })
+    fetchTasks()
 }, []);
+
+const toDo = tasks.filter(item =>item.completed===false)
+const Done = tasks.filter(item =>item.completed===true)
+
+
 return (
-  <TaskPageElement>
-         <ul>
-         {tasks.map((task) => (
-        <li key={task.id}>{task.text} {task.completed ? "Done": "To Do"}</li>
-      ))}
-    </ul>
+
+    <TaskPageElement>
+    <ListItem name={'To Do'} data={toDo}/>
+    <ListItem name= {'Done'} data={Done}/>
     </TaskPageElement>);
 }
-
 
 export default TaskPage;
