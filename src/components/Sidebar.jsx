@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { SidebarElement } from '../styles'
+import { AppCoreElement } from '../styles'
 
 
 function Sidebar({children}) {
@@ -15,9 +17,8 @@ function Sidebar({children}) {
     }
   ]
     return (
-        <div className="AppCore">
-
-        <div className="Sidebar">
+      <AppCoreElement>
+      <SidebarElement>
         {
         menuItem.map((item,index)=>(
           <NavLink to={item.path} key={index} className="link" >
@@ -25,12 +26,12 @@ function Sidebar({children}) {
           </NavLink>
         ))
       }
-        </div>
+          </SidebarElement>
       
     <main>
   {children}
 </main> 
-</div>
+</AppCoreElement>
     );
 }
 

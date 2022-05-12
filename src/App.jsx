@@ -1,31 +1,29 @@
-
 import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import TaskPage from "./pages/TaskPage";
-import Sidebar from './Sidebar'
+import Sidebar from './components/Sidebar'
+import { Header } from './styles'
+import { AppElement } from './styles'
 
 function App() {
   return (
 
-    <div className="App">
-      <div className="container">
-        <div className="Header">
-        <h1> New App</h1> 
-        </div>
+    <AppElement>
+    <div className="container">
+         <Header>
+             <h1> New App</h1> 
+         </Header>
         <BrowserRouter>
         <Sidebar> 
         <Routes>
             <Route path="/*" element={<Homepage/>} />
             <Route path="/tasklist" element={<TaskPage/>} />     
     </Routes>
-        </Sidebar> 
+    </Sidebar> 
         </BrowserRouter>
-    
-
         </div>
-      </div>
-     
+    </AppElement>
   );
 }
 

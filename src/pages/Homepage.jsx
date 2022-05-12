@@ -1,14 +1,13 @@
 import React from "react";
+import { HomePage } from "../styles";
 
-function Homepage(){
-
-return(
-  <div className="Homepage">
-    <h1>
-      This is Homepage
-    </h1>
-  </div>
-);
+function Homepage() {
+  return (
+    <HomePage>
+      Welcome to TaskList app Home Page , <br /> click on the link on the left
+      to check the tasklist.
+    </HomePage>
+  );
 }
 
 export default Homepage
