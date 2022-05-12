@@ -1,15 +1,11 @@
 import React from "react";
-import { TaskItemElement} from '../styles'
+import { TaskItemElement } from "../styles";
 
-function TaskItem(props){
-
-    return(
-        
-        <TaskItemElement>
-          <li>
-            {props.text}
-        </li>
-        </TaskItemElement>
-    );
+function TaskItem(props) {
+  return (
+    <TaskItemElement>
+      <li>{props.text}</li>
+    </TaskItemElement>
+  );
 }
-export default TaskItem
+export default TaskItem;

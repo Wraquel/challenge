@@ -1,38 +1,31 @@
 import React from "react";
-import { SidebarElement } from '../styles'
-import { AppCoreElement } from '../styles'
-import { SidebarLink } from '../styles'
+import { SidebarElement, AppCoreElement, SidebarLink  } from "../styles";
 
 
-function Sidebar({children}) {
-  
-  const menuItem =[
+function Sidebar({ children }) {
+  const menuItem = [
     {
-      path:"/*",
-      name:"Home",
+      path: "/*",
+      name: "Home",
     },
     {
-      path:"/tasklist",
-      name:"Task List",
-    }
-  ]
-    return (
-      <AppCoreElement>
+      path: "/tasklist",
+      name: "Task List",
+    },
+  ];
+  return (
+    <AppCoreElement>
       <SidebarElement>
-        {
-        menuItem.map((item,index)=>(
+        {menuItem.map((item, index) => (
           <SidebarLink to={item.path} key={index} className="link">
-           {item.name}
+            {item.name}
           </SidebarLink>
-        ))
-      }
-          </SidebarElement>
-      
-    <main>
-  {children}
-</main> 
-</AppCoreElement>
-    );
+        ))}
+      </SidebarElement>
+
+      <main>{children}</main>
+    </AppCoreElement>
+  );
 }
 
 export default Sidebar;
