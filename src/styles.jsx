@@ -76,7 +76,7 @@ export const SidebarLink = styled(NavLink)`
   box-shadow: -1px 1px 2px 3px rgba(166, 177, 191, 0.1);
 
   &:hover,
-  &:active {
+  &.active {
     background-color: #2965ed;
     color: #ffff;
   }
