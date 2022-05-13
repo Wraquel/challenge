@@ -1,4 +1,6 @@
-This is a challenge using mocked API. To acess the tasks please follow the instructions below:
+This is a challenge using mocked API. Acess deploy in  =>  https://tasklistchallenge.netlify.app/.
+
+To acess the tasks please follow the instructions below:
 
 API Details
 
