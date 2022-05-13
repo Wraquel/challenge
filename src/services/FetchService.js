@@ -5,8 +5,10 @@ export const FetchService = {
         const data = await response.json();
   
         return data;
-      } catch (err) {
-        throw err;
+      } catch (error) {
+        console.log("error", error);
+        return { error: true, message: error };
       }
     },
   };
+  

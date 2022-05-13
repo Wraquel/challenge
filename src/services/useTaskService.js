@@ -11,8 +11,7 @@ function useTaskService (){
    
       const fetchData = async () => {
         const res = await TaskService();
-
-        if (res) {
+        if (!res.error) {
           setTasks(res);
         } else {
           setError(true);

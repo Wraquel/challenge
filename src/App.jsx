@@ -8,7 +8,7 @@ function App() {
     <AppElement>
       <div className="container">
         <Header>
-          <h1> New App</h1>
+          <h1>Task List App</h1>
         </Header>
       </div>
 
