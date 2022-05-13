@@ -1,26 +1,14 @@
-import React, { useState, useEffect } from "react";
-import TaskService from "../services/TaskService";
+import React from "react";
 import ListItem from "../components/ListItem";
 import { TaskPageElement, ErrorMessage } from "../styles";
+import useTaskService from "../services/useTaskService";
+import { FcHighPriority , FcOk} from "react-icons/fc";
+
 
 function TaskPage() {
-  const [tasks, setTasks] = useState([]);
-  const [error, setError] = useState(null);
 
-  async function fetchTasks() {
-    await TaskService()
-      .then((tasks) => {
-        setTasks(tasks);
-      })
-      .catch((err) => setError(err));
-  }
-
-  useEffect(() => {
-    fetchTasks();
-  }, []);
-
-  const toDo = tasks.filter((item) => item.completed === false);
-  const Done = tasks.filter((item) => item.completed === true);
+  const {tasks, error} = useTaskService();
+  
 
   if (error) {
     return (
@@ -36,10 +24,10 @@ function TaskPage() {
 
   return tasks ? (
     <TaskPageElement>
-      <ListItem name={"To Do"} data={toDo} />
-      <ListItem name={"Done"} data={Done} />
-    </TaskPageElement>
-  ) : null;
+    {tasks.todo ? <ListItem name={"To Do"} data={tasks.todo} status={<FcHighPriority size={25}/>}/> : null}
+    {tasks.done ? <ListItem name={"Done"} data={tasks.done} status={<FcOk size={25}  />}/> : null}
+  </TaskPageElement>
+) : null;
 }
 
 export default TaskPage;

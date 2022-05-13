@@ -4,7 +4,7 @@ import { HomePage } from "../styles";
 function Homepage() {
   return (
     <HomePage>
-      Welcome to TaskList app Home Page , <br /> click on the button on the left
+      Welcome to TaskList app Home Page, <br /> click on the button on the left
       to check the tasklist.
     </HomePage>
   );

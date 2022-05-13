@@ -13,7 +13,7 @@ export const Header = styled.header`
   }
 `;
 export const AppElement = styled.div`
-  margin: 120px;
+  margin: 10px 20px;
   border: #2965ed 1px solid;
   font-family: "Poppins", sans-serif;
   box-shadow: -1px 1px 2px 3px rgba(166, 177, 191, 0.1);

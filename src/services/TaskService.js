@@ -1,7 +1,12 @@
-import axios from 'axios';
+import { FetchService } from "./FetchService";
 
-export default async function TaskService(){
-    return axios.get('http://localhost:3008/api/tasks/').then((response) => response.data)
+export default async function TaskService() {
+  const url = `http://localhost:3008/api/tasks/`;
 
-
+  return await FetchService.call(url);
 }
+
+
+
+
+
