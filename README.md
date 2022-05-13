@@ -1,3 +1,23 @@
+This is a challenge using mocked API. To acess the tasks please follow the instructions below:
+
+API Details
+
+• You will need to have NodeJS and NPM installed
+
+• Clone provided Task API app (available at: https://github.com/MarceloFonseca/tasks-api/)
+
+• Go to app dir and run npm install
+
+• Launch API using: “PORT=3008 NEW_TASK_PERIOD=60000 npm start”, where:
+
+o PORT: App port, default 8080 o NEW_TASK_PERIOD: Period on which a new task is added to the list (in milliseconds), default: 60000
+
+• You can access the API using: http://localhost:3008/api/tasks/
+
+
+****************************************************************************************
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
